@@ -1,0 +1,58 @@
+._menu-det{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	background-color: white;
+	z-index: 9999;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+._menu-det ul li a{
+	color: green;
+}
+.active{
+	border-bottom: 3px green solid;
+}
+#title-head{
+	min-height: 50vh;
+}
+.det-content{
+	margin: 30px 15px;
+}
+
+/*tabs*/
+.nav-tabs { border-bottom: 2px solid #DDD; }
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+    .nav-tabs > li > a { border: none; color: #666; }
+        .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: green !important; background: transparent; }
+        .nav-tabs > li > a::after { content: ""; background: green; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+.tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: green; }
+.tab-pane { padding: 15px 0; }
+.tab-content{padding:20px}
+.active{
+	border-bottom: none;
+}
+.card {
+	background: #FFF none repeat scroll 0% 0%;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+	margin-bottom: 30px;
+	margin-top: 20px;
+}
+
+.conperson label,.conperson p{
+	font-family: Questrial, 'sans-serif';
+}
+.card a,.det-content p {
+	font-family: Questrial, 'sans-serif';
+}
+.tab-content h4{
+	font-family: Questrial, 'sans-serif';
+	font-weight: bold;
+}
+
+@media (min-width: 300px) and (max-width: 770px){
+	.txt-compe h3{
+		top: 70px;
+	}
+}

@@ -1,0 +1,597 @@
+/*
+
+ini adalah css khusus DN35 kopma dan mungkin akan ganti thema pada
+DN yang selanjutnya.
+*/
+
+body, html{
+	margin: 0;
+	width: 100%;
+}
+
+#section{
+	height: 98vh;
+}
+nav{
+	z-index: 999;
+}
+.wrapper{
+	margin: 10px;
+}
+._menu{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.hgl{
+	height: 90vh;
+	position: relative;
+	/*background-image: url(http://www.publicdomainpictures.net/pictures/70000/nahled/green-grass-texture-background.jpg);*/
+	background-color: green;
+}
+.img-center img{
+	height: 250px;
+	text-align: center;
+	margin: auto;
+	display: block;
+}
+.img-center{
+	padding: 10vh 0;
+}
+.txt-center p{
+	text-align: center;
+	font-family: Questrial, 'sans-serif';
+	color: white;
+	margin: auto;
+	font-size: 15pt;
+}
+._menu-center{
+	margin: 0 auto;
+	display: block;
+	text-align: center;
+	height: 80px;
+	padding:30px;
+}
+._menu-center ul li{
+	list-style: none;
+	display: inline-block;
+	/*padding: 10px;*/
+	margin: 10px;
+}
+._menu-center ul li a{
+	color: white;
+	font-family: Questrial, 'sans-serif';
+	font-weight: bold;
+	text-decoration: none;
+	width: 0;
+	transition: .5s;
+}
+._menu-center ul li:after{
+	border-bottom: 3px #009933 solid;
+	display: block;
+	transform: scaleX(0);  
+ 	transition: transform 250ms ease-in-out;
+ 	transform-origin:  0% 50%;
+ 	content: '';
+}
+._menu-center ul li.active:after{
+	border-bottom: 3px #009933 solid;
+	display: none;
+	transform: scaleX(0);  
+ 	transition: transform 250ms ease-in-out;
+ 	transform-origin:  0% 50%;
+ 	content: '';
+}
+._menu-center ul li:hover:after{
+	transform: scaleX(1);
+}
+._menu-center ul li a:hover{
+	color: #009933;
+}
+.active{
+	border-bottom: 3px white solid;
+}
+.affix .active{
+	border-bottom: 3px #009933 solid;
+}
+/* Note: Try to remove the following lines to see the effect of CSS positioning */
+.affix {
+	transition: ease-in-out 0.3s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.affix ul li a{
+	color: #009933;
+}
+._hamburger{
+	display: none;
+}
+._icon-nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: url('http://le2020.com/assets/images/transparent-triangle-1.png');
+}
+.logo{
+	position: fixed;
+	top: 10px;
+	left: 30px;
+	z-index: 99;
+}
+.logo img{
+	height: 50px;
+	position: absolute;
+	top: -7px;
+	left: 40px;
+}
+.logo-bg{
+	position: absolute;
+	background-color: white;
+	top: -72px;
+	transform: rotate(45deg);
+	height: 120px;
+	width: 120px;
+	z-index: -99;
+	border-radius: 15%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+nav._navbar.affix.logo1{
+
+}
+nav._navbar.affix.logo1 img{
+	height: 50px;
+	position: absolute;
+	top: -7px;
+	left: 40px;
+}
+nav.affix-top .logo1 img{
+	display: none;
+}
+.logo1{
+	padding: 10px;
+	position: absolute;
+	display: block;
+	left: 20px;
+}
+.logo1 img{
+	height: 50px;
+}
+
+@media screen and (max-width: 600px){
+	._navbar{
+		position: fixed;
+		width: 250px;
+		height: 100%;
+		left: -320px;
+		background-color: white;
+		top: 0;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		transition: .3s;
+	}
+	.nav_active{
+		left: 0;
+	}
+	._navbar ul li{
+		display: list-item;
+	}
+	._navbar ul li a{
+		color: #009933;
+	}
+	._menu-center{
+		display: inline-block;
+		text-align: left;
+	}
+	._hamburger{
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 999;
+		display: block;
+		background-color: #009933;
+		padding: 11px;
+		cursor: pointer;
+		font-size: 20px;
+		border-radius: 100%;
+		width: 53px;
+		height: 53px;
+		text-align: center;
+		vertical-align: middle;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	._hamburger span{
+		color: white;
+	}
+	.affix {
+        position: static;
+    }
+    .active{
+    	border-bottom: 3px #009933 solid;
+    }
+    .logo1{
+    	background-color: green;
+    	position: relative;
+    	top: 0;
+    	left: 0;
+    	padding: 20px;
+    }
+    .logo1 img{
+    	display: block;
+    	margin: auto;
+    	text-align: center;
+    }
+
+}
+.border-nav{
+	/*width: 100%;*/
+	height: 10vh;
+	background-color: green;
+	text-align: center;
+	padding: 15px;
+	cursor: pointer;
+}
+.border-nav a{
+	color: white;
+	text-decoration: none;
+	font-family: Questrial, 'sans-serif';
+}
+
+.border-cons1{
+	
+}
+.bounce{
+	animation: bounce .5s infinite alternate;
+  	-webkit-animation: bounce .5s infinite alternate;
+}
+/*animation*/
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+.section2{
+	padding: 90px 10px;
+	width: 100%;
+	margin: 0;
+}
+.bg-sec2{
+	background: linear-gradient(green,white);
+}
+.section2-cons img{
+	text-align: center;
+}
+.section-padding{
+	padding: 30px;
+}
+
+.rtl-cols div[class^="col-"] {
+    float: right;
+}
+.img-box{
+	height: 250px;
+	display: block;
+	margin: auto;
+}
+#about h3, #about p{
+	font-family: Questrial, 'sans-serif';
+}
+
+@media screen and (max-width: 760px){
+	.rtl-cols div[class^="col-"] {
+	    float: inherit;
+		}
+}
+
+#events h2, #sponsor h2, #timeline h2{
+	font-family: Questrial, 'sans-serif';
+	font-weight: bold;
+	text-align: center;
+	position: relative;
+}
+.border{
+	background-color: green;
+	width: 100px;
+	height: 2px;
+	display: block;
+	margin: auto;
+}
+.conA img{
+	height: 150px;
+	display: block;
+	margin: auto;
+}
+.conA h4{
+	font-family: Questrial, 'sans-serif';
+	text-align: center;
+}
+.conA p{
+	font-family: Questrial, 'sans-serif';
+	text-align: center;
+}
+.conA1{
+	transition: linear .7s;
+	padding: 10px;
+	height: 400px;
+}
+.conA1:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.body-content{
+	padding: 100px 5px;
+}
+.conA1-1 a{
+	font-family: Questrial, 'sans-serif';
+	padding: 10px;
+	text-decoration: none;
+	background-color: green;
+	color: white;
+	transition: .6s;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.conA1-1 a:hover{
+	background-color: yellow;
+	color: black;
+}	
+.conA1-1{
+	margin-top: 25px;
+	padding: 7%;
+	text-align: center;
+	width: 100%;
+	/*height: 150px;*/
+	background-color: green;
+	/*background: url('http://comps.canstockphoto.com/can-stock-photo_csp7086394.jpg');
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;*/
+}
+
+@media screen and (max-width: 470px){
+	.body-content{
+		padding: 40px 5px;
+	}
+	#events.section2{
+		padding: 40px 10px;
+	}
+	.section2{
+		padding: 40px 10px;
+	}
+	.conA1:hover{
+		box-shadow: none;
+	}
+}
+
+.grey{
+	background-color: grey;
+}
+.list-kontak{
+	margin: 10px;
+}
+.conB{
+	padding: 15px;
+}
+.conB h4{
+	font-size: Questrial, 'sans-serif';
+	font-weight: bold;
+}
+.conB p,.conB label,.conB h4, .conB a{
+	font-family: Questrial, 'sans-serif';
+	color: white;
+}
+.garis{
+	background-color:  #999999;
+	height: 2px;
+	width: 70%;
+	display: block;
+}
+.foot{
+	background-color: black;
+	width: 100%;
+	margin: 0;
+}
+.right-text{
+	padding: 10px;
+	float: right;
+	text-align: right;
+}
+.left-text{
+	padding: 20px;
+	float: left;
+}
+.left-text img{
+	height: 30px;
+}
+.right-text p{
+	color: white;
+	font-size: 13px;
+}
+
+canvas{ 
+	display: block; 
+	vertical-align: bottom;
+	} 
+/* ---- particles.js container ---- */ 
+#particles-js{ 
+	position:absolute; 
+	width: 100%;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: 50% 50%; 
+}
+.loc-con{
+	position: absolute;
+	top: 20%;
+	padding: 20px;
+	background-color: white;
+	
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.loc-con h2{
+	font-family: Questrial, 'sans-serif';
+	font-weight: bold;
+}
+.loc-con td{
+	font-family: Questrial, 'sans-serif';
+}
+.overlay{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	top: 0;
+	left: 0;
+	padding: 0;
+	margin: 0;
+}
+#contact{
+	position: relative;
+	width: 100%;
+	height: 360px;
+}
+.green{
+	background-color: green;
+}
+.green-nobg{
+	color: green;
+}
+.spon-con{
+	padding: 30px;
+}
+.spon{
+	margin: auto;
+	display: inline-block;
+	text-align: center;
+}
+.spon img{
+	height: 125px;
+	filter: grayscale(1);
+	transition: .8s;
+}
+.spon img:hover{
+	filter: grayscale(0);
+}
+
+/*owl*/
+.owl-dot span{
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	border-radius: 100%;
+	border: 1px green solid;
+	padding: 5px;
+}
+.owl-dot.active span{
+	background-color: green;
+	display: inline-block;
+}
+.owl-dot,.owl-dot.active{
+	display: inline-block;
+}
+.owl-dots{
+	text-align: center;
+	display: inline-block;
+}
+
+.tldaftar{
+	background-color: green;
+	padding: 15px;
+	color: white;
+}
+.tldaftar h4,.tldaftar span,.tldaftar p{
+	font-family: Questrial, 'sans-serif';
+}
+.tldaftar span{
+	font-weight: bold;
+}
+@media screen and (max-width: 600px){
+	/*owl*/
+	.owl-item.active{
+		border: none;
+	}
+	.owl-dot span{
+		display: inline-block;
+		height: 15px;
+		width: 15px;
+		border-radius: 100%;
+		border: 1px green solid;
+		padding: 5px;
+	}
+	.owl-dot.active span{
+		background-color: green;
+		display: inline-block;
+		border-bottom: none;
+	}
+	.owl-dot,.owl-dot.active{
+		display: inline-block;
+		border-bottom: none;
+	}
+	.owl-dots{
+		text-align: center;
+		display: inline-block;
+		padding: 5px;
+	}
+}
+.dn-btn-more{
+	background-color: transparent;
+	text-decoration: none;
+	border: 2px solid green;
+	padding: 10px;
+	color: green;
+}
+.dn-btn-more:hover{
+	background-color: green;
+	color: white;
+}
+.bg-compe{
+	width: 100%;
+	display: block;
+	position: relative;
+	height: 50vh;
+	background-position: center;
+	position: absolute;
+}
+.cover-compe{
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAD0lEQVQImWNgQAX/yeAAAIHCA/0RE2WAAAAAAElFTkSuQmCC');
+	background-repeat: repeat;
+	/*opacity: .7;*/
+	width: 100%;
+	height: 50vh;
+	display: block;
+	position: absolute;
+}
+.txt-compe h3{
+	font-family: Questrial, 'sans-serif';
+	color: white;
+	position: absolute;
+	top: 100px;
+	padding: 50px;
+}
+.tab-content #settings h4{
+	font-weight: normal;
+}
+
+@media (min-width: 300px) and (max-width: 770px){
+	.img-center{
+		padding: 14vh;
+	}
+	.img-center img{
+		height: 120px;
+	}
+	.txt-center p{
+		font-size: 13pt;
+	}
+}
