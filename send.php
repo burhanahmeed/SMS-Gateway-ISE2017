@@ -12,7 +12,8 @@
 	$smsGateway = new smsGateway($usname ,$pass);
 
 	$deviceID = $id;
-	$number = $_POST['nomer'];
+
+	$number = explode(',', $_POST['nomer']);
 	$message = $_POST['pesan'];
 
 	$options = [
@@ -23,6 +24,10 @@
 	];
 
 	//Please note options is no required and can be left out
-	$result = $smsGateway->sendMessageToNumber($number, $message, $deviceID, $options); 	
+	// $result = $smsGateway->sendMessageToNumber($number, $message, $deviceID, $options); 
+
+	$result = $smsGateway->sendMessageToManyNumbers($number, $message, $deviceID, $options); 	
 	header("Location: index.php");
+	// print_r((array)$number);
+	// echo json_encode($result);
 ?>

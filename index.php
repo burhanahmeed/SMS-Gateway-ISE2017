@@ -54,7 +54,7 @@
 		<div class="form-group">
 		  <label class="col-md-4 control-label" for="textinput">Nomor Tujuan</label>  
 		  <div class="col-md-4">
-		  <input id="textinput" name="nomer" type="text" placeholder="81234xxxx" class="form-control input-md" value="+62">
+		  <input id="textinput" name="nomer" type="text" placeholder="pisah dengan koma (,)" class="form-control input-md" value="">
 		    
 		  </div>
 		</div>
